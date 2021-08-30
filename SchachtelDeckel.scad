@@ -1,7 +1,7 @@
 
 itemsShown="both"; // [both,box,lid]
-boxLength=70;
-boxWidth=40;
+boxLength=90;
+boxWidth=45;
 boxHeight=30;
 cornerRadius=5;
 wallThickness=2;
