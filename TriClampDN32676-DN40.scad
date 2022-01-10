@@ -14,19 +14,19 @@ $fn = 128;
   
 difference() {
     union() {
-        cylinder(h=l4,r1=d3,r2=d3);
+        cylinder(h=l4,r1=d3/2,r2=d3/2);
         translate ([0, 0, l4])
-            cylinder(h=l3-l4,r1=d2,r2=d2);
+            cylinder(h=l3-l4,r1=d2/2,r2=d2/2);
         translate ([0, 0, l4])
-            cylinder(h=l3-l4,r1=d2,r2=d2);
+            cylinder(h=l3-l4,r1=d2/2,r2=d2/2);
         h1 = d3/2 / tan(90-a1);
         translate ([0, 0, l4])
-            cylinder(h=h1,r1=d3,r2=d2);
+            cylinder(h=h1,r1=d3/2,r2=0);
     }
     translate ([0, 0, -0.1])
-        cylinder(h=l3+0.2,r1=d1,r2=d1);
+        cylinder(h=l3+0.2,r1=d1/2,r2=d1/2);
     rotate_extrude(){
-        translate([d4, 0, 0])
+        translate([d4/2, 0, 0])
             circle(r1); 
     }
 }
