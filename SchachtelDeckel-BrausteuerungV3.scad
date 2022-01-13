@@ -1,15 +1,16 @@
 
 itemsShown="both"; // [both,box,lid]
-boxLength=80;
+boxLength=85;
 boxWidth=65;
-boxHeight=35;
+boxHeight=30;
 cornerRadius=5;
 wallThickness=2;
 bottomThickness=2;
 lidThickness=2;
 lidClearance=0.2;
 lidEdgeThickness=0.5;
-dLoch = 7.5;
+hLoch = 20;
+dLoch = 8;
 // Notch in the lid
 withNotch=true;
 $fn = 128;
@@ -17,7 +18,7 @@ $fn = 128;
 difference() {
 showBox();
 rotate([90,0,90])
-    translate([boxWidth/2,boxHeight/2,-0.5])
+    translate([boxWidth/2,hLoch,-0.5])
         cylinder(boxLength+1,dLoch/2,dLoch/2);
 }
 showLid();
